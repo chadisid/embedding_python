@@ -64,8 +64,8 @@ int main(int argc, char* argv[])
             PyObject_CallMethod(pInst, "start_thread", NULL);
         }
         PyGILState_Release(state);
-
-        for (int i = 0; i < 5; i++)
+        int i;
+        for (i = 0; i < 5; i++)
         {
             printf("main thread is running\n");
             sleep(1);
