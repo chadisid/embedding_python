@@ -48,8 +48,8 @@ int main(int argc, char* argv[])
     char* tname2 = "worker2";
     pthread_create(&tid1, NULL, &run_python_function, &tname1);
     pthread_create(&tid2, NULL, &run_python_function, &tname2);
-
-    for (int i = 0; i < 5; i++)
+    int i;
+    for (i = 0; i < 5; i++)
     {
         printf("main thread is running\n");
         sleep(1);
